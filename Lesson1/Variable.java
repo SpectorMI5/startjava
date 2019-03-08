@@ -8,13 +8,14 @@ public class Variable {
     double diagonal = 15.6d;
     char threadsNumber = 52;
     boolean weather = true;
-    System.out.println("Number of Cores: " +cores
-      +"\nMemory: " +memoryVolume
-      +"\nStorage capacity: " +storageCapacity +"GB"
-      +"\nVideo card frequency: " +frequencyVideoCard +"MHz"
-      +"\nFrequency: " +frequencyCPU +"GHz"
-      +"\nScreen diagonal: " +diagonal +"\""
-      +"\nNumber of threads: " +threadsNumber
-      +"\n-Good weather!  -" +weather +" :)");
+
+    System.out.println("Number of Cores: " + cores
+      + "\nMemory: " + memoryVolume
+      + "\nStorage capacity: " + storageCapacity + "GB"
+      + "\nVideo card frequency: " + frequencyVideoCard + "MHz"
+      + "\nFrequency: " + frequencyCPU + "GHz"
+      + "\nScreen diagonal: " + diagonal + "\""
+      + "\nNumber of threads: " + threadsNumber
+      + "\n-Good weather!  -" + weather + " :)");
   }
 }
