@@ -5,11 +5,11 @@ public class ConditionalStatement {
             System.out.println("Vozrast bol'she 20 let");
         }
 
-        boolean male = true;
-        if (male) {
+        boolean isMale = true;
+        if (isMale) {
             System.out.println("Muzhskogo pola");
         }
-        if (!male) {
+        if (!isMale) {
             System.out.println("Zhenskogo pola");
         }
 
