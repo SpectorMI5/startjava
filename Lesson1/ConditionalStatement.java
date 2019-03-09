@@ -5,25 +5,25 @@ public class ConditionalStatement {
             System.out.println("Vozrast bol'she 20 let");
         }
 
-        boolean muzhskogoPola = true;
-        if (muzhskogoPola == true) {
+        boolean male = true;
+        if (male) {
             System.out.println("Muzhskogo pola");
         }
-        if (muzhskogoPola == false) {
+        if (!male) {
             System.out.println("Zhenskogo pola");
         }
 
-        float rost = 1.83F;
-        if (rost < 1.8) {
+        float growth = 1.83F;
+        if (growth < 1.8) {
             System.out.println("Nizkiy");
         } else {
             System.out.println("Visokiy");
         }
 
-        char pervayaBukvaImeni = 'E';
-        if (pervayaBukvaImeni == 'M') {
+        char firstLetterName = 'E';
+        if (firstLetterName == 'M') {
             System.out.println("Imya nachinaetsa ne s bukvi M");
-        } else if (pervayaBukvaImeni == 'I') {
+        } else if (firstLetterName == 'I') {
             System.out.println("Imya nachinaetsa ne s bukvi I");
         } else {
             System.out.println("Imya nachinaetsa s drugoy bukvi");

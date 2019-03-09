@@ -1,6 +1,5 @@
 public class Cycle {
     public static void main(String[] args) {
-
         for (int i = 0; i <= 20; i++) {
             System.out.print(i + " ");
         }
@@ -16,7 +15,7 @@ public class Cycle {
         int sum = 0;
         do {
             if (i % 2 == 1) {
-                sum = sum + i;
+                sum += i;
             }
             i++;
         } while (i < 20);
