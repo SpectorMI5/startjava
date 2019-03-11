@@ -5,13 +5,13 @@ public class MyFirstGame {
 
         while (guessNumber != hiddenNumber) {
             if (guessNumber > hiddenNumber) {
-                System.out.println("Zagadannoe chislo menshe " + guessNumber);
+                System.out.println("Hidden number less than " + guessNumber);
                 guessNumber--;
             } else {
-                System.out.println("Zagadannoe chislo bolshe " + guessNumber);
+                System.out.println("Hidden number greater than " + guessNumber);
                 guessNumber++;
             }
         }
-        System.out.println(guessNumber + "! Vi ugadali chislo!");
+        System.out.println(guessNumber + "! You guessed the number!");
     }
 }
