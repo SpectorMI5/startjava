@@ -3,31 +3,26 @@ public class Calculator {
         int firstNumber = 4;
         int secondNumber = 2;
         int result;
-        char operationMark = '+';
+        char sign = '+';
 
-        if (operationMark == '+') {
+        if (sign == '+') {
             result = firstNumber + secondNumber;
-            System.out.println(firstNumber + " + " + secondNumber + " = " + result);
-        } else if (operationMark == '-') {
+        } else if (sign == '-') {
             result = firstNumber - secondNumber;
-            System.out.println(firstNumber + " - " + secondNumber + " = " + result);
-        } else if (operationMark == '*') {
+        } else if (sign == '*') {
             result = firstNumber * secondNumber;
-            System.out.println(firstNumber + " * " + secondNumber + " = " + result);
-        } else if (operationMark == '/') {
+        } else if (sign == '/') {
             result = firstNumber / secondNumber;
-            System.out.println(firstNumber + " / " + secondNumber + " = " + result);
-        } else if (operationMark == '^') {
+        } else if (sign == '^') {
             result = firstNumber;
             int i = secondNumber;
             while (i > 1) {
-                result = result * firstNumber;
+                result *= firstNumber;
                 i--;
             }
-            System.out.println(firstNumber + " v stepeni " + secondNumber + " = " + result);
         } else {
             result = firstNumber % secondNumber;
-            System.out.println("Ostatok ot deleniya " + firstNumber + " na " + secondNumber + " = " + result);
         }
+        System.out.println(firstNumber + " " + sign + " " + secondNumber + " = " + result);
     }
 }
