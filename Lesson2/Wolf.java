@@ -6,19 +6,23 @@ public class Wolf {
     int age;
     String colour;
 
-    void go () {
+    void go() {
         System.out.println("Wolf walked 10 meters");
     }
-    void sit () {
+
+    void sit() {
         System.out.println("Wolf sat down");
     }
-    void run () {
+
+    void run() {
         System.out.println("Wolf ran 20 meters");
     }
-    void howl () {
+
+    void howl() {
         System.out.println("UU-UU-UU");
     }
-    boolean hunt () {
+
+    boolean hunt() {
         System.out.println("Wolf got prey");
         return true;
     }
