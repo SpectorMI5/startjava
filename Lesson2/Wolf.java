@@ -10,7 +10,7 @@ public class Wolf {
         return gender;
     }
 
-    void setGender(String gender) {
+    public void setGender(String gender) {
         this.gender = gender;
     }
 
@@ -18,7 +18,7 @@ public class Wolf {
         return nickname;
     }
 
-    void setNickname(String nickname) {
+    public void setNickname(String nickname) {
         this.nickname = nickname;
     }
 
@@ -26,7 +26,7 @@ public class Wolf {
         return weight;
     }
 
-    void setWeight(int weight) {
+    public void setWeight(int weight) {
         this.weight = weight;
     }
 
@@ -34,7 +34,7 @@ public class Wolf {
         return age;
     }
 
-    void setAge(int age) {
+    public void setAge(int age) {
         if (age > 8) {
             System.out.println("Invalid age");
         } else {
@@ -46,7 +46,7 @@ public class Wolf {
         return colour;
     }
 
-    void setColour(String colour) {
+    public void setColour(String colour) {
         this.colour = colour;
     }
 
