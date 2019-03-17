@@ -2,11 +2,11 @@ import java.util.Scanner;
 
 public class CalculatorTest {
 
-    public static void program() {
-        Calculator calc = new Calculator();
-        Scanner scanNumber = new Scanner(System.in);
-        Scanner scanSign = new Scanner(System.in);
+    static Calculator calc = new Calculator();
+    static Scanner scanNumber = new Scanner(System.in);
+    static Scanner scanSign = new Scanner(System.in);
 
+    public static void program() {
         System.out.print("Print first number: ");
         calc.setFirstNumber(scanNumber.nextInt());
         System.out.print("Print sign of operation [+ - * / ^ %]: ");
