@@ -26,7 +26,7 @@ public class CalculatorTest {
                 } else {
 
                 }
-            } while (1 == 1);
+            } while (true);
         } while (choice.equals("yes"));
     }
 }
