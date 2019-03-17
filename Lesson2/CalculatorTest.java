@@ -19,14 +19,7 @@ public class CalculatorTest {
             do {
                 System.out.print("Want to continue? [yes/no]: ");
                 choice = scan.nextLine();
-                if (choice.equals("yes")) {
-                    break;
-                } else if (choice.equals("no")) {
-                    break;
-                } else {
-
-                }
-            } while (true);
+            } while (!choice.equals("yes") && !choice.equals("no"));
         } while (choice.equals("yes"));
     }
 }
