@@ -5,32 +5,12 @@ public class Calculator {
     private int result;
     private String sign;
 
-    public int getFirstNumber() {
-        return firstNumber;
-    }
-
     public void setFirstNumber(int firstNumber) {
         this.firstNumber = firstNumber;
     }
 
-    public int getSecondNumber() {
-        return secondNumber;
-    }
-
     public void setSecondNumber(int secondNumber) {
         this.secondNumber = secondNumber;
-    }
-
-    public int getResult() {
-        return result;
-    }
-
-    public void setResult(int result) {
-        this.result = result;
-    }
-
-    public String getSign() {
-        return sign;
     }
 
     public void setSign(String sign) {
