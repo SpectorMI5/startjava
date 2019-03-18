@@ -32,15 +32,11 @@ public class Calculator {
                 result = firstNumber / secondNumber;
                 break;
             case "^":
-                if (secondNumber == 0) {
-                    result = 1;
-                } else {
-                    result = firstNumber;
-                    int i = secondNumber;
-                    while (i > 1) {
-                        result *= firstNumber;
-                        i--;
-                    }
+                result = 1;
+                int i = secondNumber;
+                while (i > 0) {
+                    result *= firstNumber;
+                    i--;
                 }
                 break;
             case "%":
