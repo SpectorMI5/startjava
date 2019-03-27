@@ -8,11 +8,23 @@ public class GuessNumberTest {
         Player playerOne = new Player(scan.nextLine());
         System.out.print("Enter second player name: ");
         Player playerTwo = new Player(scan.nextLine());
-        GuessNumber guess1 = new GuessNumber(playerOne.getName(), playerTwo.getName());
+        GuessNumber guess = new GuessNumber();
         String choice;
 
         do {
-            guess1.guess();
+            guess.setHiddenNumber();
+            while (true) {
+                playerOne.setNumber(guess.inputNumber(playerOne.getName()));
+                guess.numberСomparison(playerOne.getNumber());
+                if (playerOne.getNumber() == guess.getHiddenNumber()) {
+                    break;
+                }
+                playerTwo.setNumber(guess.inputNumber(playerTwo.getName()));
+                guess.numberСomparison(playerTwo.getNumber());
+                if (playerTwo.getNumber() == guess.getHiddenNumber()) {
+                    break;
+                }
+            }
             do {
                 System.out.print("Want to continue? [yes/no]: ");
                 choice = scan.nextLine();

@@ -2,43 +2,34 @@ import java.util.Scanner;
 
 public class GuessNumber {
 
-    public GuessNumber(String firstPlayerName, String secondPlayerName) {
-        this.firstPlayerName = firstPlayerName;
-        this.secondPlayerName = secondPlayerName;
-    }
-
-    private String firstPlayerName;
-    private String secondPlayerName;
+    private String playerName;
     private int hiddenNumber;
-    private int firstPlayerNumber;
-    private int secondPlayerNumber;
+    private int playerNumber;
     Scanner scanNumber = new Scanner(System.in);
 
-    public void guess() {
+    public int getHiddenNumber() {
+        return hiddenNumber;
+    }
+
+    public void setHiddenNumber() {
         hiddenNumber = (int)(Math.random() * 101);
         System.out.println(hiddenNumber);
-        do {
-            System.out.print("First player guess number: ");
-            firstPlayerNumber = scanNumber.nextInt();
-            if (firstPlayerNumber > hiddenNumber) {
-                System.out.println("Hidden number less than " + firstPlayerNumber);
-            } else if (firstPlayerNumber < hiddenNumber) {
-                System.out.println("Hidden number greater than " + firstPlayerNumber);
-            } else {
-                System.out.println(firstPlayerName + " guessed right hidden number!");
-                break;
-            }
+    }
 
-            System.out.print("Second player guess number: ");
-            secondPlayerNumber = scanNumber.nextInt();
-            if (secondPlayerNumber > hiddenNumber) {
-                System.out.println("Hidden number less than " + secondPlayerNumber);
-            } else if(secondPlayerNumber < hiddenNumber) {
-                System.out.println("Hidden number greater than " + secondPlayerNumber);
-            } else {
-                System.out.println(secondPlayerName + " guessed right hidden number!");
-                break;
-            }
-        } while(firstPlayerNumber != hiddenNumber && secondPlayerNumber != hiddenNumber);
+    public int inputNumber(String playerName) {
+        this.playerName = playerName;
+        System.out.print(playerName + " guess number: ");
+        return scanNumber.nextInt();
+    }
+
+    public void numberСomparison(int playerNumber) {
+        this.playerNumber = playerNumber;
+        if (playerNumber > hiddenNumber) {
+            System.out.println("Hidden number less than " + playerNumber);
+        } else if (playerNumber < hiddenNumber) {
+            System.out.println("Hidden number greater than " + playerNumber);
+        } else {
+            System.out.println(playerName + " guessed right hidden number!");
+        }
     }
 }
