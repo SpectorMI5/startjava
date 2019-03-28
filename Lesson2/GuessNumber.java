@@ -13,7 +13,7 @@ public class GuessNumber {
 
     public void setHiddenNumber() {
         hiddenNumber = (int)(Math.random() * 101);
-        System.out.println(hiddenNumber);
+        //System.out.println(hiddenNumber);
         playerNumber = 101;     //Если загаданное число будет тем же, что и в прошлый раз, это присвоение исправит случаи пропуска ходов
     }
 
