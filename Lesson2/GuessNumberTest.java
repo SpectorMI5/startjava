@@ -13,17 +13,11 @@ public class GuessNumberTest {
 
         do {
             guess.setHiddenNumber();
-            while (true) {
+            while (guess.getPlayerNumber() != guess.getHiddenNumber()) {
                 playerOne.setNumber(guess.inputNumber(playerOne.getName()));
                 guess.numberСomparison(playerOne.getNumber());
-                if (playerOne.getNumber() == guess.getHiddenNumber()) {
-                    break;
-                }
                 playerTwo.setNumber(guess.inputNumber(playerTwo.getName()));
                 guess.numberСomparison(playerTwo.getNumber());
-                if (playerTwo.getNumber() == guess.getHiddenNumber()) {
-                    break;
-                }
             }
             do {
                 System.out.print("Want to continue? [yes/no]: ");
