@@ -8,17 +8,12 @@ public class GuessNumberTest {
         Player playerOne = new Player(scan.nextLine());
         System.out.print("Enter second player name: ");
         Player playerTwo = new Player(scan.nextLine());
-        GuessNumber guess = new GuessNumber();
+        GuessNumber guessNum = new GuessNumber(playerOne, playerTwo);
         String choice;
 
         do {
-            guess.setHiddenNumber();
-            while (guess.getPlayerNumber() != guess.getHiddenNumber()) {
-                playerOne.setNumber(guess.inputNumber(playerOne.getName()));
-                guess.numberСomparison(playerOne.getNumber());
-                playerTwo.setNumber(guess.inputNumber(playerTwo.getName()));
-                guess.numberСomparison(playerTwo.getNumber());
-            }
+            guessNum.setHiddenNumber();
+            guessNum.guess();
             do {
                 System.out.print("Want to continue? [yes/no]: ");
                 choice = scan.nextLine();
