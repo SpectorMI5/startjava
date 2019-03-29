@@ -22,7 +22,7 @@ public class GuessNumber {
 
     private void setHiddenNumber() {
         hiddenNumber = (int)(Math.random() * 101);
-        System.out.println(hiddenNumber);
+        //System.out.println(hiddenNumber);
     }
 
     private void compare(Player player) {
