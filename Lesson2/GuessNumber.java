@@ -12,10 +12,6 @@ public class GuessNumber {
         this.playerTwo = playerTwo;
     }
 
-    public int getHiddenNumber() {
-        return hiddenNumber;
-    }
-
     public void setHiddenNumber() {
         hiddenNumber = (int)(Math.random() * 101);
         System.out.println(hiddenNumber);
