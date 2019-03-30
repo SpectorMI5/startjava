@@ -13,30 +13,34 @@ public class GuessNumber {
     }
 
     public void guess() {
-        setHiddenNumber();
+        generateHiddenNumber();
         do {
-            compare(playerOne);
-            compare(playerTwo);
-        } while (hiddenNumber != 101);
+            input(playerOne);
+            if (playerOne.getNumber() == hiddenNumber) {
+                break;
+            }
+            input(playerTwo);
+        } while (playerTwo.getNumber() != hiddenNumber);
     }
 
-    private void setHiddenNumber() {
+    private void generateHiddenNumber() {
         hiddenNumber = (int)(Math.random() * 101);
-        //System.out.println(hiddenNumber);
+        System.out.println(hiddenNumber);
+    }
+
+    private void input(Player player) {
+        System.out.print(player.getName() + " guess number: ");
+        player.setNumber(scanNumber.nextInt());
+        compare(player);
     }
 
     private void compare(Player player) {
-        if (hiddenNumber != 101) {  //Если первый игрок угадал число, то ход второго пропустится
-            System.out.print(player.getName() + " guess number: ");
-            player.setNumber(scanNumber.nextInt());
-            if (player.getNumber() > hiddenNumber) {
-                System.out.println("Hidden number less than " + player.getNumber());
-            } else if (player.getNumber() < hiddenNumber) {
-                System.out.println("Hidden number greater than " + player.getNumber());
-            } else {
-                System.out.println(player.getName() + " guessed right hidden number!");
-                hiddenNumber = 101;
-            }
+        if (player.getNumber() > hiddenNumber) {
+            System.out.println("Hidden number less than " + player.getNumber());
+        } else if (player.getNumber() < hiddenNumber) {
+            System.out.println("Hidden number greater than " + player.getNumber());
+        } else {
+            System.out.println(player.getName() + " guessed right hidden number!");
         }
     }
 }
