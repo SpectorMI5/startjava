@@ -15,26 +15,27 @@ public class GuessNumber {
     public void guess() {
         generateHiddenNumber();
         do {
-            input(playerOne);
+            inputPlayerNumber(playerOne);
+            compareNumbers(playerOne);
             if (playerOne.getNumber() == hiddenNumber) {
                 break;
             }
-            input(playerTwo);
+            inputPlayerNumber(playerTwo);
+            compareNumbers(playerTwo);
         } while (playerTwo.getNumber() != hiddenNumber);
     }
 
     private void generateHiddenNumber() {
         hiddenNumber = (int)(Math.random() * 101);
-        //System.out.println(hiddenNumber);
+        System.out.println(hiddenNumber);
     }
 
-    private void input(Player player) {
+    private void inputPlayerNumber(Player player) {
         System.out.print(player.getName() + " guess number: ");
         player.setNumber(scanNumber.nextInt());
-        compare(player);
     }
 
-    private void compare(Player player) {
+    private void compareNumbers(Player player) {
         if (player.getNumber() > hiddenNumber) {
             System.out.println("Hidden number less than " + player.getNumber());
         } else if (player.getNumber() < hiddenNumber) {
