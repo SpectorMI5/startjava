@@ -25,7 +25,7 @@ public class GuessNumber {
 
     private void generateHiddenNumber() {
         hiddenNumber = (int)(Math.random() * 101);
-        System.out.println(hiddenNumber);
+        //System.out.println(hiddenNumber);
     }
 
     private void input(Player player) {
