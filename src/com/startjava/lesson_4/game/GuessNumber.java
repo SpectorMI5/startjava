@@ -8,8 +8,8 @@ public class GuessNumber {
     private Player playerOne;
     private Player playerTwo;
     private int hiddenNumber;
-    private int attempt;    //попытки
-    private boolean isGuessNumber;      //отгадано число или нет
+    private int attempt;
+    private boolean isGuessNumber;
     Scanner scanNumber = new Scanner(System.in);
 
     public GuessNumber(Player playerOne, Player playerTwo) {
@@ -21,15 +21,12 @@ public class GuessNumber {
         generateHiddenNumber();
 
         for (attempt = 0; attempt < 10; attempt++) {
-            inputPlayerNumber(playerOne);
-            compareNumbers(playerOne);
-            if (playerOne.getNumber() == hiddenNumber) {
+            forCycle(playerOne);
+            if (isGuessNumber) {
                 break;
             }
-
-            inputPlayerNumber(playerTwo);
-            compareNumbers(playerTwo);
-            if (playerTwo.getNumber() == hiddenNumber) {
+            forCycle(playerTwo);
+            if (isGuessNumber) {
                 break;
             }
             if (attempt == 9) {
@@ -53,6 +50,11 @@ public class GuessNumber {
         //System.out.println(hiddenNumber);
     }
 
+    private void forCycle(Player player) {
+        inputPlayerNumber(player);
+        compareNumbers(player);
+    }
+
     private void inputPlayerNumber(Player player) {
         System.out.print(player.getName() + " отгадывает число: ");
         player.setNumber(scanNumber.nextInt());     //считываем число, которое вводит игрок
@@ -66,19 +68,18 @@ public class GuessNumber {
             System.out.println("Загаданное число больше чем " + player.getNumber());
         } else {
             System.out.println(player.getName() + " угадал число " + hiddenNumber + " с " + (attempt + 1) + " попытки");
+            isGuessNumber = true;
         }
         if (attempt == 9 && player.getNumber() != hiddenNumber) {   //если попытки закончились, то выводим сообщение
             System.out.println("У " + player.getName() + " закончились попытки");
         }
     }
 
-    private void outputNumbers (Player player) {
-        int[] playerNumbers = Arrays.copyOf(player.getNumbers(), (attempt + 1));
+    private void outputNumbers(Player player) {
+        System.out.println(Arrays.toString(player.getNumbers(attempt)));     //выводим все попытки игрока
         if (player.getNumber() == hiddenNumber) {
             attempt--;
-            isGuessNumber = true;
         }
-        System.out.println(Arrays.toString(playerNumbers));     //выводим все попытки игрока
     }
 
     private void fillNumbers (Player player) {
