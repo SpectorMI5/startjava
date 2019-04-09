@@ -15,7 +15,7 @@ public class Calculator {
 
     public void calculate() {
         split();
-        switch (sign.toLowerCase()) {
+        switch (sign) {
             case "+":
                 result = Math.addExact(firstNumber, secondNumber);
                 break;
