@@ -21,11 +21,11 @@ public class GuessNumber {
         generateHiddenNumber();
 
         for (attempt = 0; attempt < 10; attempt++) {
-            forCycle(playerOne);
+            makeMove(playerOne);
             if (isGuessNumber) {
                 break;
             }
-            forCycle(playerTwo);
+            makeMove(playerTwo);
             if (isGuessNumber) {
                 break;
             }
@@ -50,7 +50,7 @@ public class GuessNumber {
         //System.out.println(hiddenNumber);
     }
 
-    private void forCycle(Player player) {
+    private void makeMove(Player player) {
         inputPlayerNumber(player);
         compareNumbers(player);
     }
