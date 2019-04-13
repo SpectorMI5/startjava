@@ -1,4 +1,3 @@
-\c jaegers;
 SELECT * FROM jaegers;
 SELECT * FROM jaegers WHERE origin = 'USA';
 SELECT * FROM jaegers WHERE mark = 'Mark-1' OR mark = 'Mark-6';
